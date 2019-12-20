@@ -9,8 +9,24 @@
 As a part of your [GitHub Actions](https://github.com/features/actions) workflow, add a new step as follows:
 
 ```yml
-      - name: Upload static assets to Dark
-        uses: gregbrimble/dark-static-assets-action@master
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1.0.0
+        with:
+          fetch-depth: 1
+      # Build, transpile etc.
+      - name: Upload static assets to Dark canvas
+        uses: gregbrimble/dark-static-assets-action@v1.0.0
         with:
           user: DARK_USERNAME_HERE
           password: ${{ secrets.DARK_PASSWORD }}
@@ -20,4 +36,4 @@ As a part of your [GitHub Actions](https://github.com/features/actions) workflow
 
 We strongly advise utilizing [GitHub Actions secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) to securely store your Dark password.
 
-A full example can be found in [.github/workflows/default.yml](https://github.com/GregBrimble/dark-static-assets-action/blob/master/.github/workflows/default.yml).
+A full example can be found in [`.github/workflows/default.yml`](https://github.com/GregBrimble/dark-static-assets-action/blob/master/.github/workflows/default.yml).
