@@ -1,0 +1,22 @@
+name: 'Upload static assets to Dark canvas'
+author: 'Greg Brimble'
+description: 'Upload static assets to a Dark canvas as a part of your GitHub Actions pipeline'
+inputs:
+ user:
+   description: 'Your Dark username'
+   required: true
+ password:
+   description: 'Your Dark password'
+   required: true
+ canvas:
+   description: 'Your Dark canvas name'
+   required: true
+ paths:
+   description: 'The files to upload'
+   required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'upload-cloud'
+  color: 'purple'
