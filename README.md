@@ -3,6 +3,7 @@
 > Upload Static Assets to a [Dark](https://darklang.com/) canvas
 
 [![GitHub Actions Example/Test](https://github.com/GregBrimble/dark-static-assets-action/workflows/Example/Test/badge.svg)](https://github.com/GregBrimble/dark-static-assets-action/actions?query=workflow%3AExample%2FTest)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGregBrimble%2Fdark-static-assets-action.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FGregBrimble%2Fdark-static-assets-action?ref=badge_shield)
 
 ## Usage
 
@@ -37,3 +38,7 @@ jobs:
 We strongly advise utilizing [GitHub Actions secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) to securely store your Dark password.
 
 A full example can be found in [`.github/workflows/default.yml`](https://github.com/GregBrimble/dark-static-assets-action/blob/master/.github/workflows/default.yml).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGregBrimble%2Fdark-static-assets-action.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FGregBrimble%2Fdark-static-assets-action?ref=badge_large)
