@@ -21,9 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1.0.0
-        with:
-          fetch-depth: 1
+        uses: actions/checkout@v2
       # Build, transpile etc.
       - name: Upload static assets to Dark canvas
         uses: gregbrimble/dark-static-assets-action@v1.0.0
